@@ -17,31 +17,37 @@ namespace MegaDesk_4_TammyDresen
             InitializeComponent();
         }
 
-        private void addQuote_Click(object sender, EventArgs e)
+        private void AddQuote_Click(object sender, EventArgs e)
         {
-            AddQuote addNewQuoteForm = new AddQuote();
-            addNewQuoteForm.Tag = this;
+            AddQuote addNewQuoteForm = new AddQuote
+            {
+                Tag = this
+            };
             addNewQuoteForm.Show(this);
             Hide();
         }
 
-        private void viewQuotes_Click(object sender, EventArgs e)
+        private void ViewQuotes_Click(object sender, EventArgs e)
         {
-            ViewAllQuotes viewQuoteForm = new ViewAllQuotes();
-            viewQuoteForm.Tag = this;
+            ViewAllQuotes viewQuoteForm = new ViewAllQuotes
+            {
+                Tag = this
+            };
             viewQuoteForm.Show(this);
             Hide();
         }
 
-        private void searchQuotes_Click(object sender, EventArgs e)
+        private void SearchQuotes_Click(object sender, EventArgs e)
         {
-            SearchQuotes viewSearchQuotesForm = new SearchQuotes();
-            viewSearchQuotesForm.Tag = this;
+            SearchQuotes viewSearchQuotesForm = new SearchQuotes
+            {
+                Tag = this
+            };
             viewSearchQuotesForm.Show(this);
             Hide();
         }
 
-        private void exit_Click(object sender, EventArgs e)
+        private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
