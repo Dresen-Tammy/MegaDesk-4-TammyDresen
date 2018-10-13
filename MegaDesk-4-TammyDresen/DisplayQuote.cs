@@ -38,6 +38,7 @@ namespace MegaDesk_4_TammyDresen
             displayDepth.Text = newQuote.Desk.Depth.ToString() + " inches";
             displayDrawers.Text = newQuote.Desk.Drawers.ToString();
             displayMaterial.Text = (string)newQuote.Desk.Finish.ToString();
+            displayDelivery.Text = newQuote.TurnAround.ToString();
             displayBasePrice.Text = newQuote.DeskPrice.ToString();
             area.Text = newQuote.Desk.Area.ToString() + " sq. in.";
             displayBasePrice.Text = "$" + newQuote.DeskPrice.ToString();

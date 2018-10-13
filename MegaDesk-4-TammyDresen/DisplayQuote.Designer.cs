@@ -215,11 +215,11 @@
             this.displayDelivery.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.displayDelivery.AutoSize = true;
             this.displayDelivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayDelivery.Location = new System.Drawing.Point(202, 185);
+            this.displayDelivery.Location = new System.Drawing.Point(193, 184);
             this.displayDelivery.Name = "displayDelivery";
-            this.displayDelivery.Size = new System.Drawing.Size(18, 20);
+            this.displayDelivery.Size = new System.Drawing.Size(27, 20);
             this.displayDelivery.TabIndex = 22;
-            this.displayDelivery.Text = "7";
+            this.displayDelivery.Text = "14";
             this.displayDelivery.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // totalPrice

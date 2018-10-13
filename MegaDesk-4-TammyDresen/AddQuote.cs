@@ -96,6 +96,7 @@ namespace MegaDesk_4_TammyDresen
             }
         }
 
+
         // keypress validator disallows any non digit character on userDepth and userWidth
         private void UserDepth_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -125,6 +126,37 @@ namespace MegaDesk_4_TammyDresen
                 Finish = (Materials)materialComboBox.SelectedValue;
                 RushDays = int.Parse(userSpeed.Text);
 
+                // instantiate new deskQuote
+                DeskQuote NewQuote = new DeskQuote(DeskWidth, DeskDepth, Drawers, Finish, RushDays, CustomerName);
+                // Save the Quote Price
+                QuotePrice = NewQuote.CalculateQuotePrice();
+
+                // store the user input, the quote amount, and the date of the quote
+                // create CSV string
+                string csvString = CustomerName + "," + DeskWidth + "," + DeskDepth + "," + Drawers + "," +
+                    Finish + "," + RushDays + "," + QuotePrice + "," + DateTime.Now;
+                string csvFile = @"quotes.txt";
+                // check if file exists. If no, create file
+                if (!File.Exists(csvFile))
+                {
+                    using (StreamWriter sw = File.CreateText(csvFile))
+                    {
+                        sw.WriteLine(csvString);
+                    }
+                }
+                // if yes, append to file
+                else
+                {
+                    using (StreamWriter sw = File.AppendText(csvFile))
+                    {
+                        sw.WriteLine(csvString);
+                    }
+                }
+                // output the price quote to the screen along with the original user input 
+                DisplayQuote displayQuote = new DisplayQuote(NewQuote)
+                { Tag = this };
+                displayQuote.Show(this);
+                Hide();
             }
             catch (Exception)
             {
@@ -159,37 +191,7 @@ namespace MegaDesk_4_TammyDresen
 
             }
 
-            // instantiate new deskQuote
-            DeskQuote NewQuote = new DeskQuote(DeskWidth, DeskDepth, Drawers, Finish, RushDays, CustomerName);
-            // Save the Quote Price
-            QuotePrice = NewQuote.CalculateQuotePrice();
-
-            // store the user input, the quote amount, and the date of the quote
-            // create CSV string
-            string csvString = CustomerName + "," + DeskWidth + "," + DeskDepth + "," + Drawers + "," +
-                Finish + "," + RushDays + "," + QuotePrice + "," + DateTime.Now;
-            string csvFile = @"quotes.txt";
-            // check if file exists. If no, create file
-            if (!File.Exists(csvFile))
-            {
-                using (StreamWriter sw = File.CreateText(csvFile))
-                {
-                    sw.WriteLine(csvString);
-                }
-            }
-            // if yes, append to file
-            else
-            {
-                using (StreamWriter sw = File.AppendText(csvFile))
-                {
-                    sw.WriteLine(csvString);
-                }
-            }
-            // output the price quote to the screen along with the original user input 
-            DisplayQuote displayQuote = new DisplayQuote(NewQuote)
-            { Tag = this };
-            displayQuote.Show(this);
-            Hide();
+            
         }
 
         private string ToString(object selectedItem)
@@ -207,6 +209,6 @@ namespace MegaDesk_4_TammyDresen
             userName.BackColor = Color.White;
         }
 
-
+        
     }
 }

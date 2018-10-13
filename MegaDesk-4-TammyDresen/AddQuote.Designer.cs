@@ -191,7 +191,7 @@
             this.materialComboBox.Location = new System.Drawing.Point(250, 268);
             this.materialComboBox.Name = "materialComboBox";
             this.materialComboBox.Size = new System.Drawing.Size(121, 28);
-            this.materialComboBox.TabIndex = 11;
+            this.materialComboBox.TabIndex = 5;
             // 
             // userDepth
             // 
@@ -209,7 +209,7 @@
             0});
             this.userDepth.Name = "userDepth";
             this.userDepth.Size = new System.Drawing.Size(120, 26);
-            this.userDepth.TabIndex = 13;
+            this.userDepth.TabIndex = 3;
             this.userDepth.Value = new decimal(new int[] {
             12,
             0,
@@ -233,7 +233,7 @@
             this.userWidth.Name = "userWidth";
             this.userWidth.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.userWidth.Size = new System.Drawing.Size(120, 26);
-            this.userWidth.TabIndex = 14;
+            this.userWidth.TabIndex = 2;
             this.userWidth.Value = new decimal(new int[] {
             24,
             0,
@@ -253,7 +253,8 @@
             this.userSpeed.Location = new System.Drawing.Point(250, 314);
             this.userSpeed.Name = "userSpeed";
             this.userSpeed.Size = new System.Drawing.Size(121, 28);
-            this.userSpeed.TabIndex = 15;
+            this.userSpeed.TabIndex = 6;
+            this.userSpeed.Validating += new System.ComponentModel.CancelEventHandler(this.userSpeed_Validating);
             // 
             // AddQuote
             // 
