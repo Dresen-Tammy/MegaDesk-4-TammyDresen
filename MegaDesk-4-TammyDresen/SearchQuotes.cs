@@ -24,7 +24,7 @@ namespace MegaDesk_4_TammyDresen
         }
 
         // event when search button is clicked.
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             // get the material type from the combobox and then search the quotes.txt file.
             try
@@ -75,7 +75,7 @@ namespace MegaDesk_4_TammyDresen
         }
 
         // close and go back to main menu
-        private void btnSearchCancel_Click(object sender, EventArgs e)
+        private void BtnSearchCancel_Click(object sender, EventArgs e)
         {
             var mainMenu = (MainMenu)Tag;
             mainMenu.Show();

@@ -254,7 +254,6 @@
             this.userSpeed.Name = "userSpeed";
             this.userSpeed.Size = new System.Drawing.Size(121, 28);
             this.userSpeed.TabIndex = 6;
-            this.userSpeed.Validating += new System.ComponentModel.CancelEventHandler(this.userSpeed_Validating);
             // 
             // AddQuote
             // 

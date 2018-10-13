@@ -54,7 +54,7 @@
             this.btnSearchCancel.TabIndex = 0;
             this.btnSearchCancel.Text = "Main Menu";
             this.btnSearchCancel.UseVisualStyleBackColor = false;
-            this.btnSearchCancel.Click += new System.EventHandler(this.btnSearchCancel_Click);
+            this.btnSearchCancel.Click += new System.EventHandler(this.BtnSearchCancel_Click);
             // 
             // searchButton
             // 
@@ -66,7 +66,7 @@
             this.searchButton.TabIndex = 1;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
-            this.searchButton.Click += new System.EventHandler(this.button1_Click);
+            this.searchButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // lblSearch
             // 
